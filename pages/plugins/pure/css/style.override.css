@@ -1,0 +1,278 @@
+.level.level--current::after,
+.level.level--current .level--label {
+	transform: rotateZ(-45deg) rotateZ(45deg) rotateX(0deg) translateZ(0vmin)
+		translateX(1vmin) translateY(0vmin);
+}
+
+.level--label {
+	width: 96vmin !important;
+	height: 64vmin !important;
+	width: 10vmin;
+	clip-path: polygon(0% 0%, 31vmin 0%, 31vmin 7%, 0% 7%);
+	opacity: 0;
+}
+
+.level--label label {
+	font-size: 2.5vmin;
+}
+
+.level {
+	transform-origin: inherit !important;
+	width: 96vmin !important;
+	height: 64vmin !important;
+	opacity: 0;
+	transition: border-color 1s;
+}
+
+.level rect {
+	transition: fill 1s, fill-opacity 0.4s;
+}
+
+.level.level--current:focus {
+	outline: none;
+}
+
+#mallLoadingBuilder {
+	margin-top: 30vh;
+	z-index: 2;
+}
+
+.levels {
+	transform: translateY(40vh);
+	transform-style: preserve-3d;
+}
+
+.mall[data-mall-id="E"] .levels {
+	transform: translateY(44vh);
+}
+.levels.levels--open .level:not(.level--current) {
+	pointer-events: none;
+}
+
+.wing__outline {
+	opacity: 0.5;
+	transition: opacity 0.3s !important;
+	transition-timing-function: cubic-bezier(0.7, 0, 0.3, 1);
+}
+
+.level:hover .wing__outline {
+	opacity: 0.8;
+}
+
+.level--current .wing__outline {
+	opacity: 1 !important;
+}
+
+.master-plan {
+	position: absolute;
+	left: 50%;
+	top: 50%;
+	opacity: 0;
+	width: 100%;
+	transition: opacity 0.3s;
+}
+
+.master-plan .canvas-wrap {
+	transform-origin: inherit !important;
+	width: 112vmin !important;
+	height: 73vmin !important;
+	margin: auto;
+}
+
+#level--zoom--controls {
+	-webkit-transition: opacity 0.8s;
+	transition: opacity 0.8s;
+	position: absolute;
+	bottom: 0;
+}
+
+.facilitynav {
+	text-align: center;
+	-webkit-transition: opacity 0.8s;
+	transition: opacity 0.8s;
+}
+
+.facilitynav--hidden {
+	pointer-events: none;
+	opacity: 0;
+}
+
+.wing__outline {
+	transition: opacity 0.3s;
+}
+
+rect.active-mobile-shopunit {
+	stroke-width: 2;
+}
+
+.mall[data-colorless="false"] .level.level--current.b-grey rect.wing__outline {
+	opacity: 0 !important;
+}
+
+/* DONT SHOW HEADERS IN SHOP UNITS CONTAINER'S IOS LIST */
+#quickview-pure .list-view-group-container {
+	padding: 0;
+}
+
+#quickview-pure .list-view-fake-header,
+#quickview-pure .list-view-group-header {
+	display: none !important;
+}
+
+.pure-center {
+	position: absolute;
+	left: 50%;
+	top: 50%;
+	transform: translate(-50%, -50%);
+}
+
+#bottom-loader #error-container.hidden {
+	display: block !important;
+	opacity: 0;
+	pointer-events: none;
+}
+
+.overlay.pure #controls-container {
+	position: fixed;
+	left: 0;
+}
+
+.overlay.pure .overlay-content {
+	height: 100% !important;
+}
+
+.overlay.pure .content {
+	overflow: visible !important;
+}
+
+#quickview-pure {
+	z-index: 1020;
+}
+
+#quickview-pure * {
+	user-select: none;
+	-webkit-user-drag: none;
+	-khtml-user-drag: none;
+	-moz-user-drag: none;
+	-o-user-drag: none;
+	user-drag: none;
+}
+
+#quickview-pure .scroll-content ul .checkbox-container input[type="checkbox"] {
+	width: 18px;
+	height: 18px;
+}
+
+#quickview-pure .scroll-content ul .checkbox-container input[type="checkbox"] {
+	width: 18px;
+	height: 18px;
+}
+
+#quickview-pure .scroll-content {
+	transition: padding-bottom 0.4s cubic-bezier(0.2, 1, 0.3, 1);
+	will-change: padding-bottom;
+}
+
+#quickview-pure .floating-button-container {
+	transition: height 0.4s cubic-bezier(0.2, 1, 0.3, 1);
+	will-change: height;
+
+	height: 0;
+	background: #f4f4f459;
+	bottom: 0;
+	position: fixed;
+	backdrop-filter: blur(2px);
+}
+
+#quickview-pure .floating-button-container button {
+	width: 100%;
+}
+
+#quickview-pure.has-selection div.floating-button-container {
+	height: 50px;
+}
+
+#quickview-pure.has-selection .scroll-content {
+	padding-bottom: 153px;
+}
+
+#quickview-pure .quickview-toggle #toggle-selection {
+	color: #9e9ea6;
+}
+
+#quickview-pure .quickview-toggle #selections-only {
+	color: #9e9ea6;
+}
+
+/* [ShopUnitStatus.AVAILIABLE] */
+/* #quickview-pure.allow-selection[data-allowable-selection-status="0"] .scroll-content ul .checkbox-container:not([data-status="0"]) {
+	opacity: .4;
+	pointer-events: none;
+} */
+
+/* [ShopUnitStatus.RESERVED] */
+/* #quickview-pure.allow-selection[data-allowable-selection-status="1"] .scroll-content ul .checkbox-container:not([data-status="1"]) {
+	opacity: .4;
+	pointer-events: none;
+} */
+
+/* [ShopUnitStatus.SOLD] */
+/* #quickview-pure.allow-selection[data-allowable-selection-status="2"] .scroll-content ul .checkbox-container:not([data-status="2"]) {
+	opacity: .4;
+	pointer-events: none;
+} */
+
+/* [ShopUnitStatus.SOLD] */
+/* #quickview-pure .scroll-content ul .checkbox-container[data-status="2"] {
+	pointer-events: none;
+} */
+
+#quickview-pure
+	.scroll-content
+	ul
+	.checkbox-container
+	input[disabled][readonly] {
+	opacity: 0.4;
+}
+
+rect.irrelevant {
+	display: none !important;
+}
+
+/* Lins and Others
+------------------------------------
+*/
+span.a-link {
+	text-shadow: none !important;
+	color: #4e37b6;
+	transition: color 0.1s linear 0s, background-color 0.1s linear 0s,
+		opacity 0.2s linear 0s !important;
+	font-weight: 500;
+}
+
+span.a-link:focus,
+span.a-link:hover,
+span.a-link:active {
+	color: #7252d3;
+}
+
+span.a-link,
+span.a-link:focus,
+span.a-link:hover,
+span.a-link:active {
+	outline: 0 !important;
+	text-decoration: none;
+}
+
+span.a-link[ng-click] {
+	cursor: pointer;
+}
+
+#quickview-pure .chat-user-list > a {
+	height: auto !important;
+	min-height: 60px !important;
+}
+
+body.demo .page-container .page-content-wrapper .content {
+	padding: 0px;	
+}

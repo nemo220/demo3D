@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta http-equiv="content-type" content="text/html;charset=UTF-8" />
+  <meta charset="utf-8" />
+  <title>3D Map Overlay Demo</title>
+  <meta name="viewport"
+    content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, shrink-to-fit=no" />
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-touch-fullscreen" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="default">
+  <link href="assets/plugins/pace/pace-theme-flash.css" rel="stylesheet" type="text/css" />
+  <link href="assets/plugins/bootstrap/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link href="assets/plugins/jquery-scrollbar/jquery.scrollbar.css" rel="stylesheet" type="text/css" media="screen" />
+  <!-- MY ACTUAL DEPENDENCIES -->
+  <link href="assets/plugins/jquery-nouislider/jquery.nouislider.css" rel="stylesheet" type="text/css" media="screen" />
+  <link class="main-stylesheet" href="pages/css/themes/corporate.css" rel="stylesheet" type="text/css" />
+  <link rel="stylesheet" type="text/css" href="pages/plugins/pure/css/style.css" />
+  <link rel="stylesheet" type="text/css" href="pages/plugins/pure/css/style.override.css" />
+  <link rel="stylesheet" type="text/css" href="pages/plugins/pure/css/tippy.js/svg-arrow.css" />
+  <base href="./"></base>
+  <!-- END MY ACTUAL DEPENDENCIES -->
+  <!-- Please remove the file below for production: Contains demo classes -->
+</head>
+
+<body class="fixed-header demo">
+  <!-- START PAGE-CONTAINER -->
+  <div class="page-container overflow-hidden" style="padding: 0px;">
+    <!-- START PAGE CONTENT WRAPPER -->
+    <div class="page-content-wrapper">
+      <div class="content">
+        <button class="btn btn-green btn-lg" id="demo-help" style="z-index: 1020; width: 100%;">Help?</button>
+        <form id="Allocation" data-types="{'14':'160'}"
+          data-blocks="[{'block':'Zone 1','wing':'S'},{'block':'Zone 1','wing':'U'},{'block':'Zone 1','wing':'V'},{'block':'Zone 1','wing':'F'}]">
+
+          <div class="form-group field-dynamicmodel-items">
+
+            <input type="hidden" name="DynamicModel[items]">
+            <div id="allocation-items" class="multiple-input">
+              <table class="multiple-input-list table table-condensed table-renderer">
+                <thead>
+                  <tr>
+                    <th class="list-cell__type" style="width: 30%;">Type</th>
+                    <th class="list-cell__product_label" style="width: 20%;">Number</th>
+                    <th class="list-cell__name" style="width: 40%;">Name</th>
+                    </th>
+                    <th class="list-cell__button" style="width: 10%;"></th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr class="multiple-input-list__item">
+                    <td class="list-cell__type">
+                      <div class="field-dynamicmodel-items-0-type form-group"><input type="text"
+                          id="dynamicmodel-items-0-type" class="form-control" name="DynamicModel[items][0][type]"
+                          readonly="readonly"></div>
+                    </td>
+                    <td class="list-cell__product_label">
+                      <div class="field-dynamicmodel-items-0-product_label form-group"><input type="text"
+                          id="dynamicmodel-items-0-product_label" class="product-number-input-el form-control"
+                          name="DynamicModel[items][0][product_label]" readonly="readonly"></div>
+                    </td>
+                    <td class="list-cell__name">
+                      <div class="field-dynamicmodel-items-0-name form-group"><input type="text"
+                          id="dynamicmodel-items-0-name" class="product-name-input-el form-control"
+                          name="DynamicModel[items][0][name]" readonly="readonly"></div>
+                    </td>
+                    <td class="list-cell__button"></td>
+                  </tr>
+                </tbody>
+                <tfoot>
+                  <tr>
+                    <td colspan="3">&nbsp;</td>
+                    <td class="list-cell__button">
+                      <div class="multiple-input-list__btn js-input-plus btn btn-default" style="float: right;"><i
+                          class="fa fa-plus"></i>
+                      </div>
+                    </td>
+                  </tr>
+                </tfoot>
+              </table>
+            </div>
+            <div class="help-block"></div>
+
+          </div>
+
+          <div class="form-group">
+            <button type="submit" class="btn btn-primary btn-cons">Save</button>
+          </div>
+
+        </form>
+      </div>
+      <!-- START PAGE CONTENT -->
+      <!-- END PAGE CONTENT -->
+    </div>
+    <!-- END PAGE CONTENT WRAPPER -->
+  </div>
+  <!-- END PAGE CONTAINER -->
+
+  <!-- BEGIN HELP MODAL -->
+  <div class="modal fade slide-up" id="modalSlideUp" tabindex="-1" role="dialog" aria-hidden="false">
+    <div class="modal-dialog ">
+      <div class="modal-content-wrapper">
+        <div class="modal-content" style="max-height: 60vh; overflow-y: scroll;">
+          <div class="modal-header clearfix text-left">
+            <button type="button" class="close" data-dismiss="modal" aria-hidden="true"><i class="pg-close fs-14"></i>
+            </button>
+            <h5><span class="semi-bold"></span>Information</span></h5>
+            <p class="p-b-10">How to use the 3D Map</p>
+          </div>
+          <div class="modal-body">
+
+            <p>Some information has been randomized to protect business critical information and the privacy of tenants
+            </p>
+            <p>Network requests are being simulated to induce typical network latency</p>
+            <p>
+              While this instruction set is significatly voluminous, understand that good money was paid for this
+              project,
+              all these features were necessary and had to be documented.
+              blacked out units are sold while units in grey are reserved
+            </p>
+
+            <p>reserved units are reserved for one of 2 reasons:
+            </p>
+            <ul>
+              <li>business decisions</li>
+              <li>said unit has been paid for by a tenant but contracts haven't been finalized clicking the search menu
+                item reveals a sidebar containing an index of all shops currently in view</li>
+              <li>the status of each shop is visible</li>
+              <li>the names of the tenants of reserved/sold shops are also visible</li>
+              <li>the search bar can be used to find a shop unit if the shop number is known</li>
+              <li>clicking a shop unit from the 3D map also locates it in the sidebar, you can clear the search bar to
+                restore the index of all visible shops</li>
+            </ul>
+
+            <p>
+              selection can be made using the checkboxes in the side bar or by SHIFT+clicking the interested units, as a
+              rule of thumb, selections can't be made against sold units AND units that've been reserved for a tenant,
+              for obvious reasons
+            </p>
+            <p>
+              the obvious reason being, you can't practically reserve/unreserve a sold unit or a unit that has been
+              offered to someone else pending contract finalization
+            </p>
+
+            <p>
+              to allocate one or more shops, start by selecting available units, that is, units that aren't sold
+              (BLACKED) or already reserved (GREY), when done with your selection, you may click the eye in the top left
+              of the sidebar to toggle between viewing your active selection (for review processes) and all visible
+              units, and then clicking the "Apply Selection" at the base of the list
+            </p>
+
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- END HELP MODAL -->
+
+  <!-- BEGIN VENDOR JS -->
+  <script src="assets/plugins/pace/pace.min.js" type="text/javascript"></script>
+  <!--  A polyfill for browsers that don't support ligatures: remove liga.js if not needed-->
+  <script src="assets/plugins/liga.js" type="text/javascript"></script>
+  <script src="assets/plugins/jquery/jquery-3.2.1.min.js" type="text/javascript"></script>
+  <script src="assets/plugins/modernizr.custom.js" type="text/javascript"></script>
+  <script src="assets/plugins/bootstrap/js/bootstrap.min.js" type="text/javascript"></script>
+  <script src="pages/plugins/pure/js/vendors/jquery.ioslist.min.custom.js"></script>
+  <script src="assets/plugins/jquery-scrollbar/jquery.scrollbar.min.js"></script>
+  <script src="assets/plugins/jquery-nouislider/jquery.liblink.js" type="text/javascript"></script>
+  <script src="assets/plugins/classie/classie.js" type="text/javascript"></script>
+  <!-- END VENDOR JS -->
+  <!-- BEGIN CORE TEMPLATE JS -->
+  <!-- BEGIN CORE TEMPLATE JS -->
+  <script src="pages/js/pages.js"></script>
+  <!-- END CORE TEMPLATE JS -->
+  <!-- BEGIN PAGE LEVEL JS -->
+  <script src="assets/js/scripts.js" type="text/javascript"></script>
+  <!-- END PAGE LEVEL JS -->
+
+  <!-- MY ACTUAL DEPENDENCIESSS -->
+  <script src="pages/plugins/pure/js/vendors/jquery.nouislider.7.0.10.custom.js"></script>
+  <script src="pages/plugins/pure/js/vendors/panzoom.min.js"></script>
+  <script src="pages/plugins/pure/js/vendors/popper.min.js"></script>
+  <script src="pages/plugins/pure/js/vendors/tippy-bundle.umd.min.js"></script>
+  <script src="pages/plugins/pure/js/vendors/axios.min.js"></script>
+  <script src="pages/plugins/pure/js/vendors/rapheal.min.js"></script>
+  <script src="assets/plugins/jquery.multipleInput.min.js"></script>
+  <!-- imported by pages admin already -->
+  <script src="pages/plugins/pure/js/bundle.local.js"></script>
+
+  <script src="snippet.js"></script>
+  <script type="text/javascript">
+    $("#demo-help").on("click", function () {
+      $('#modalSlideUp').modal('show');
+    });
+  </script>
+  <!-- END MY ACTUAL DEPENDENCIESSS -->
+  <!-- END PAGE LEVEL JS -->
+</body>
+
+</html>

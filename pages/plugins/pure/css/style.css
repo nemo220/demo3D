@@ -1,0 +1,111 @@
+.mall {
+	position: relative;
+	width: 100%;
+	height: 100%;
+	-webkit-perspective: 3500px;
+	perspective: 3500px;
+	-webkit-perspective-origin: 0% 50%;
+	perspective-origin: 0% 50%;
+	-webkit-transition: -webkit-transform 0.8s;
+	transition: transform 0.8s;
+	-webkit-transition-timing-function: cubic-bezier(0.2, 1, 0.3, 1);
+	transition-timing-function: cubic-bezier(0.2, 1, 0.3, 1);
+}
+
+.level {
+	width: 96vmin;
+	height: 64vmin;
+	-webkit-transform-style: preserve-3d;
+	transform-style: preserve-3d;
+	position: absolute;
+}
+
+.level--label {
+	line-height: 0;
+	position: absolute;
+	z-index: 100;
+	top: -2em;
+	white-space: nowrap;
+	color: #7d7d86;
+	-webkit-transition-timing-function: cubic-bezier(0.7, 0, 0.3, 1);
+	transition-timing-function: cubic-bezier(0.7, 0, 0.3, 1);
+	user-select: none;
+	pointer-events: none;
+}
+
+.level:hover .level--label,
+.level--current .level--label {
+	color: #515158;
+}
+
+.level--current .level--label {
+	-webkit-transform: rotateZ(-20deg) rotateZ(45deg) rotateX(-70deg)
+	translateZ(5vmin) translateX(5vmin) translateY(-10vmin);
+	transform: rotateZ(-20deg) rotateZ(45deg) rotateX(-70deg) translateZ(5vmin)
+	translateX(5vmin) translateY(-10vmin);
+}
+
+/* Level nav */
+.mallnav {
+	text-align: center;
+	-webkit-transition: opacity 0.8s;
+	transition: opacity 0.8s;
+}
+
+.mallnav--hidden {
+	pointer-events: none;
+	opacity: 0;
+}
+
+/* Level map */
+
+.map__ground {
+	fill: #d7d7dc;
+}
+
+.map__outline {
+	-webkit-transition: fill 0.3s;
+	transition: fill 0.3s;
+	fill: #bbb;
+}
+
+.map__outline__zero__fill {
+	-webkit-transition: stroke 0.3s;
+	transition: stroke 0.3s;
+	fill: none;
+}
+.level:hover .map__outline__zero__fill,
+.level--current .map__outline__zero__fill {
+	stroke: #a6a3a8;
+}
+
+.level:hover .map__outline,
+.level--current .map__outline {
+	fill: #a6a3a8;
+}
+
+.map__tree {
+	fill: #7bad7f;
+}
+
+.map__lake {
+	fill: #a2bbdd;
+}
+
+.map__space {
+	-webkit-transition: fill 0.8s, fill-opacity 0.8s;
+	transition: fill 0.8s, fill-opacity 0.8s;
+	fill-opacity: 0.6;
+}
+
+.mall[data-colorless="true"] .level .map__space:not([data-reserved="true"]):not([data-sold="true"]) {
+	fill: #bdbdbd !important;
+}
+
+.level--current .map__space {
+	fill-opacity: 1;
+}
+
+.map__space--selected {
+	fill: #a4a4a4;
+}
