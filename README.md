@@ -24,11 +24,11 @@ The extensions of the base class each define how they draw/map out the floor pal
 
 | Levels of a single mall | All malls in the facility |
 | ------------------ | --------------- |
-| ![](/previews/abc_levels.png) | ![](/previews/facility_plan.png) 
+|![](/previews/abc_levels.png)|![](/previews/facility_plan.png)
 
 | Levels of another mall | A single floor plan |
 | ------------------ | --------------- |
-| ![](/previews/kee_klamp_levels.png) | ![](/previews/floor_plan.png) 
+|![](/previews/kee_klamp_levels.png)|![](/previews/floor_plan.png)
 
 
 
@@ -56,5 +56,5 @@ For more instructions, consider reading the HELP section in the live demo
 
 [Noel Ama](https://www.linkedin.com/in/noel-ama/) the lone multifaceted software engineer who built out this solution
 
-[Mary Lou's work on this](https://tympanus.net/Development/Interactive3DMallMap/) served as the initial fork for this project which was reasonably overhauled in order to deliver an intuitive business solution
+[Mary Lou's work](https://tympanus.net/Development/Interactive3DMallMap/) served as the initial fork for this project which was reasonably overhauled in order to deliver an intuitive business solution
 
